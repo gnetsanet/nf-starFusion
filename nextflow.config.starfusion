@@ -1,0 +1,11 @@
+aws {
+  accessKey = 'XXXXXXXXXXXXXXXXXXXX'
+  secretKey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+  region = 'us-east-1'
+}
+process {
+  executor = 'awsbatch'
+  queue = 'nf-generic-job-queue-user'
+  container = 'job-definition://starfusion'
+}
+executor.awscli="/home/ec2-user/miniconda/bin/aws"
